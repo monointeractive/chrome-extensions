@@ -1,4 +1,4 @@
-
+console.log('init-extension');
 window.filiLoader = (isDevMode) => {
     let href = (window.location.href||'').toLowerCase();
     if(
