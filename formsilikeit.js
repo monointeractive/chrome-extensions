@@ -1,4 +1,5 @@
-  window.filiLoader = (isDevMode) => {
+alert(123);  
+window.filiLoader = (isDevMode) => {
     let href = (window.location.href||'').toLowerCase();
     if(
       href.indexOf('google.com/forms') > -1 ||
