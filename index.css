@@ -1,0 +1,15 @@
+a.bookmarlet{
+ cursor: move; /* fallback if grab cursor is unsupported */
+ cursor: grab;
+ cursor: -moz-grab;
+ cursor: -webkit-grab;
+}
+a.bookmarlet span{
+ display:none;
+}
+
+a.bookmarlet:before{
+  display:inline-block;
+  content: "☰ Przeciągnij mnie na pasek zakładek";
+  padding:20px;
+}
