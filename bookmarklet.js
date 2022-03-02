@@ -33,6 +33,11 @@ $(document).ready(() => {
                 e.stopPropagation();
                 alert('Masz przeciągnąć mnie na pasek zakładek, a nie klikać 😈');
             }).appendTo('.bookmarklet-wrapper');
+
+        $(`<div class="form-group mt-3">
+            <label for="url">Adres tej strony:</label>
+            <input name="url" type="text" class="form-control" value=${window.location.href} />
+          </div>`).appendTo('.bookmarklet-wrapper');
         } else {
             $('.form').removeClass('d-none');        
         }        
