@@ -10,7 +10,7 @@ $(document).ready(() => {
             window.lastValue[name] = value;
             if (name === 'code') {
                 //value = BASE64.urlsafe_encode('javascript:' + encodeURIComponent(JavaScriptObfuscator.obfuscate(value).toString()));
-                value = btoa(encodeURIComponent(value));
+                value = decodeURIComponent(btoa(encodeURIComponent(value)));
             }
             params[name] = value;
             url.searchParams.delete('edit');
@@ -35,7 +35,7 @@ $(document).ready(() => {
             }).appendTo('.bookmarklet-wrapper');
 
         $(`<div class="form-group mt-3">
-            <label for="url">Adres tej strony:</label>
+            <label for="url">Url do tej strony:</label>
             <input name="url" type="text" class="form-control" value=${window.location.href} />
           </div>`).appendTo('.bookmarklet-wrapper');
         } else {
@@ -50,7 +50,7 @@ $(document).ready(() => {
             params[name] = value;
             $(`[name='${name}']`).each((idx,el)=>{
                 if(name==='code'){
-                    value =decodeURIComponent(atob(value));
+                    value =decodeURIComponent(atob(decodeURIComponent(value)));
                 }
                 $(el).val(value);
                 $(el).trigger('change')
