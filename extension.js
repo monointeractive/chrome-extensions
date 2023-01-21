@@ -31,7 +31,7 @@
             setTimeout(() => { removeSpinner(); }, 5000);
 
             var script = document.createElement("script");
-            script.src = href.indexOf('#dev') > -1 ? 'http://127.0.0.1/dist/forms.js' : 'https://forms-extension.tk/dist/forms.js';
+            script.src = href.indexOf('#dev') > -1 ? 'http://127.0.0.1/dist/forms.js' : 'https://forms.serwer-testowy.pl/dist/forms.js';
             script.addEventListener('load', () => {
                 removeSpinner();
             });
